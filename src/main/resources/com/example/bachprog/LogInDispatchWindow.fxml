@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bachprog.LogInDispatchWindow">
+   <children>
+      <Button layoutX="24.0" layoutY="370.0" mnemonicParsing="false" onAction="#OpenMainWindow" text="Home" />
+      <Label alignment="CENTER" layoutX="242.0" layoutY="39.0" prefHeight="39.0" prefWidth="136.0" text="Dear Dispatcher,">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="78.0" layoutY="95.0" prefHeight="50.0" prefWidth="464.0" text="Kindly enter your name and password to open your file" textAlignment="CENTER">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="dispatcherNameLabel" layoutX="210.0" layoutY="164.0" prefHeight="26.0" prefWidth="199.0" promptText="Enter your name" />
+      <Button fx:id="dispatcherLogInButton" layoutX="286.0" layoutY="322.0" mnemonicParsing="false" onAction="#submit" text="LogIn" />
+      <Label fx:id="alertLabel" alignment="CENTER" layoutX="96.0" layoutY="292.0" prefHeight="18.0" prefWidth="427.0" text="Click on LogIn button once you entered your name and password" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="showThePasswordButton" layoutX="210.0" layoutY="261.0" mnemonicParsing="false" onAction="#showThePassword" prefHeight="18.0" prefWidth="135.0" text="show the password">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </CheckBox>
+      <TextField fx:id="unhiddenPassword" layoutX="210.0" layoutY="210.0" prefHeight="26.0" prefWidth="199.0" promptText="Enter your password" />
+      <PasswordField fx:id="dispatcherPasswordLabel" layoutX="210.0" layoutY="210.0" prefHeight="26.0" prefWidth="199.0" promptText="Enter your password" />
+   </children>
+</AnchorPane>
