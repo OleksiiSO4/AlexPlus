@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="378.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bachprog.DispatchWindow">
+   <children>
+      <ListView fx:id="requests" layoutX="3.0" layoutY="48.0" onEditStart="#selectedObjectFromList" prefHeight="152.0" prefWidth="395.0" />
+      <MenuBar prefHeight="26.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Privacy">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Change the password" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="?__?">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="5.0" layoutY="29.0" prefHeight="18.0" prefWidth="75.0" text="Requests:">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="454.0" layoutY="29.0" prefHeight="18.0" prefWidth="75.0" text="Client" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="416.0" layoutY="204.0" prefHeight="20.0" prefWidth="46.0" text="Client: " textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="416.0" layoutY="245.0" prefHeight="20.0" prefWidth="103.0" text="Phone number:" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="416.0" layoutY="292.0" prefHeight="20.0" prefWidth="103.0" text="Email address:" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="clientNameField" alignment="CENTER_RIGHT" layoutX="415.0" layoutY="224.0" prefHeight="20.0" prefWidth="166.0" textAlignment="CENTER" textFill="#bf8686">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="clientPhNumberField" alignment="CENTER_RIGHT" layoutX="415.0" layoutY="270.0" prefHeight="20.0" prefWidth="166.0" textAlignment="CENTER" textFill="#bf8686">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="clientEmailAddressField" alignment="CENTER_RIGHT" layoutX="418.0" layoutY="314.0" prefHeight="20.0" prefWidth="166.0" textAlignment="CENTER" textFill="#bf8686">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="clientImage" fitHeight="152.0" fitWidth="185.0" layoutX="416.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../avatar_icon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="5.0" layoutY="204.0" prefHeight="20.0" prefWidth="75.0" text="Mechanics:">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="mechanicList" layoutX="5.0" layoutY="224.0" prefHeight="116.0" prefWidth="395.0" />
+      <Button fx:id="openOrderCreationWindow" layoutX="257.0" layoutY="347.0" mnemonicParsing="false" onAction="#openOrderCreationWindow" text="Create a task" />
+   </children>
+</AnchorPane>
